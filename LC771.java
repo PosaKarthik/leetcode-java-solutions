@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class LC771{
     public static void main(String[] args){
 
@@ -48,5 +50,30 @@ int answer = 0;
 
         System.out.println("Answer : "+answer);
 
+
+
+        //Optimized
+
+        String jewels2 = "aA";
+ String stones2 = "aAAbbbb";
+
+int answer2 = 0;
+
+        HashMap<Character,Integer> hashMap = new HashMap<>();
+
+        for(int i=0;i<stones2.length();i++){
+            char stonesChar = stones2.charAt(i);
+            hashMap.put(stonesChar,hashMap.getOrDefault(stonesChar,0)+1);
+        
+        }
+        for(char ch : hashMap.keySet()){
+            for(int i=0;i<jewels2.length();i++){
+            if(ch == jewels2.charAt(i)){
+                answer2+=hashMap.get(ch);
+            }
+        }
+            }
+        System.out.println("Answer2  : "+answer2);
+        
     }
 }
