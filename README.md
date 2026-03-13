@@ -1,2 +1,2 @@
-# LeetCode-Problems-with-Java
-Here I am going to push LeetCode problems i Solve.
+# leetcode-java-solutions
+Collection of LeetCode problems solved using Java.
